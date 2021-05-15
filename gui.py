@@ -13,7 +13,7 @@ def add_file():
 
 window = Tk()
 window.title("파일 이름변환 프로그램")
-window.geometry("1000x500")
+window.geometry("800x400")
 
 
 # 파일 프레임
@@ -21,10 +21,10 @@ file_frame = Frame(window)
 file_frame.pack(fill="x")
 
 
-button_add_file = Button(file_frame, padx=5, pady=5, width=14, text="파일추가")
+button_add_file = Button(file_frame, padx=5, pady=3, width=14, text="파일추가")
 button_add_file.pack(side="left")
 
-button_del_file = Button(file_frame, padx=5, pady=5, width=14, text="선택 파일삭제")
+button_del_file = Button(file_frame, padx=5, pady=3, width=14, text="선택 파일삭제")
 button_del_file.pack(side=("left"))
 
 
