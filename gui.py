@@ -3,12 +3,18 @@ from tkinter import *
 from tkinter import filedialog
 
 
+
 def add_file():
     files = filedialog.askopenfilenames(
         title="파일을 선택하세요",
         filetypes=(("PNG파일", "*.png"), ("모든 파일", "*.*")),
         initialdir="C:/",
     )
+    for file in files:
+        list_file.insert(END,file)
+
+
+
 
 
 window = Tk()
@@ -21,7 +27,7 @@ file_frame = Frame(window)
 file_frame.pack(fill="x")
 
 
-button_add_file = Button(file_frame, padx=5, pady=3, width=14, text="파일추가")
+button_add_file = Button(file_frame, padx=5, pady=3, width=14, text="파일추가",command=add_file)
 button_add_file.pack(side="left")
 
 button_del_file = Button(file_frame, padx=5, pady=3, width=14, text="선택 파일삭제")
@@ -41,9 +47,12 @@ list_file = Listbox(
     width=30,
     height=20,
     yscrollcommand=Scrollbar.set,
+    
 )
+
 list_file.pack(side="left", fill="both", expand=True)
 Scrollbar.config(command=list_file.yview)
+
 
 
 # 저장 경로 설정
