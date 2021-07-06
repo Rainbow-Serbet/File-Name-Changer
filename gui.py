@@ -18,7 +18,7 @@ window.geometry("800x400")
 
 # 파일 프레임
 file_frame = Frame(window)
-file_frame.pack(side="left")
+file_frame.pack(side="top")
 
 
 button_add_file = Button(file_frame, padx=5, pady=3, width=14, text="파일추가")
