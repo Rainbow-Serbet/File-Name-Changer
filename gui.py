@@ -1,4 +1,4 @@
-from os import pathsep
+from os import access, pathsep
 from tkinter import *
 from tkinter import filedialog
 
@@ -18,7 +18,7 @@ window.geometry("800x400")
 
 # 파일 프레임
 file_frame = Frame(window)
-file_frame.pack(fill="x")
+file_frame.pack(side="left")
 
 
 button_add_file = Button(file_frame, padx=5, pady=3, width=14, text="파일추가")
@@ -30,17 +30,13 @@ button_del_file.pack(side=("left"))
 
 # 리스트 프레임
 list_frame = Frame(window)
-list_frame.pack()
+list_frame.pack(side="left")
 
 Scrollbar = Scrollbar(list_frame)
-Scrollbar.pack(side="right", fill="y")
+Scrollbar.pack(side="right", fill="both")
 
 list_file = Listbox(
-    list_frame,
-    selectmode="extended",
-    width=30,
-    height=20,
-    yscrollcommand=Scrollbar.set,
+    list_frame, selectmode="extended", width=30, height=20, yscrollcommand=Scrollbar.set
 )
 list_file.pack(side="left", fill="both", expand=True)
 Scrollbar.config(command=list_file.yview)
@@ -48,7 +44,7 @@ Scrollbar.config(command=list_file.yview)
 
 # 저장 경로 설정
 path_frame = LabelFrame(window, text="저장경로")
-path_frame.pack(fill="x")
+path_frame.pack(side="left")
 
 txt_dest_path = Entry(path_frame)
 txt_dest_path.pack(side="left", fill="x", expand=True, ipady=4)
@@ -57,5 +53,16 @@ button_dest_path = Button(path_frame, text="찾아보기", width=10)
 button_dest_path.pack(side="right")
 
 
-window.resizable(False, False)
+frame2 = Frame(window)
+frame2.pack(side="right")
+
+
+# 이름 패턴 입력
+name_button = Button(frame2, text="확인")
+name_button.pack(side="right")
+
+name_textbox = Entry(frame2)
+name_textbox.pack(side="right")
+
+window.resizable(True, True)
 window.mainloop()
