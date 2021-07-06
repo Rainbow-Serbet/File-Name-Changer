@@ -62,6 +62,8 @@ right_frame = Frame(window, background="green")
 right_frame.pack(side="left", fill="y")
 
 ##
+
+###
 name_button = Button(right_frame, text="적용")
 name_button.pack(side="right", ipadx=10)
 name_textbox = Entry(right_frame)
