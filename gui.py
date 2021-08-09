@@ -21,13 +21,13 @@ button_frame.pack(side="top", anchor="nw", fill="x")
 
 
 ### 버튼 라벨
-button_add_file = Button(button_frame, padx=5, pady=3, width=14, text="파일추가")
+button_add_file = Button(button_frame, padx=5, pady=3, width=14, text="파일추가", command=fileopen)
 button_add_file.pack(side="left")
 
 button_del_file = Button(button_frame, padx=5, pady=3, width=14, text="선택 파일삭제")
 button_del_file.pack(side=("left"))
 
-button_help = Button(button_frame, padx=5, pady=3, width=14, text="도움말",command=readme_url_connect)
+button_help = Button(button_frame, padx=5, pady=3, width=14, text="도움말", command=readme_url_connect)
 button_help.pack(side="right")
 
 ## 파일 프레임(파일 입출력 프레임 내부에 선언)
