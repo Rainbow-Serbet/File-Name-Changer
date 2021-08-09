@@ -57,7 +57,7 @@ path_frame = LabelFrame(save_path_frame, text="저장경로")
 path_frame.pack(side="left", fill="both")
 
 txt_dest_path = Entry(path_frame)
-txt_dest_path.pack(side="left", fill="x", expand=True, ipadx=140, ipady=4, text = directoryopen)
+txt_dest_path.pack(side="left", fill="x", expand=True, ipadx=140, ipady=4)
 
 button_dest_path = Button(path_frame, text="찾아보기", width=10, command=directoryopen)
 button_dest_path.pack(side="right")
