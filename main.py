@@ -3,6 +3,5 @@ from gui import *
 from tkinter import *
 import webbrowser
 
-#window
-
-
+# window
+##수정중

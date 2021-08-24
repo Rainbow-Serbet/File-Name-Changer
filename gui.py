@@ -2,6 +2,28 @@ from tkinter import *
 import webbrowser
 from func import *
 
+"""
+    상속 구분 개요  #다중주석처리 - 헷갈려서 만듬
+    window
+        file_inout_frame
+            button_frame
+                button_add_file
+                button_dell_file
+                button_help
+            file_frame
+                list_frame
+                    list_file
+            save_path_frame
+                path_frame
+                    txt_dest_path
+                    button_dest_path
+        run_frame
+            name_frame
+                name_button
+                name_textbox
+        setting_frame
+"""
+
 window = Tk()
 window.iconbitmap("icon.ico")
 window.title("파일 이름변환기 Ver1.0")
