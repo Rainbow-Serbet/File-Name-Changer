@@ -1,6 +1,6 @@
 # File-Name-Changer
 
-# Project team Github = [github]
+# Project team Github
 
 [github](https://github.com/Rainbow-Serbet/File-Name-Changer/blob/main/README.md)
 
